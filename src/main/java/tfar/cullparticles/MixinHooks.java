@@ -8,7 +8,7 @@ import net.minecraft.client.render.VertexConsumer;
 public class MixinHooks {
   public static final MinecraftClient mc = MinecraftClient.getInstance();
   public static void cullParticles(Particle particle, VertexConsumer consumer, Camera camera, float deltaTime) {
-    if (((Capture)mc.worldRenderer).capturedFrustum().isVisible(particle.getBoundingBox()))
+    if (false)
       particle.buildGeometry(consumer,camera,deltaTime);
   }
 }
